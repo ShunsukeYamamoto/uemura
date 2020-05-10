@@ -65,3 +65,6 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'haml-rails'
+gem "font-awesome-sass"
+gem 'line-bot-api'
+gem 'dotenv-rails'
