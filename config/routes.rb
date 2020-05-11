@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  root "home#index"
+  get "orders/menu" => "orders/menu"
 end
