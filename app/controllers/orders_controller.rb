@@ -15,6 +15,11 @@ class OrdersController < ApplicationController
     @order.save
   end
 
+  def data
+    @food = Food.
+    @count = params[:count]
+  end
+
 
 
   private
