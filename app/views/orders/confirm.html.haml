@@ -1,0 +1,14 @@
+%p #{@order.name}
+%p #{@order.address}
+%p #{@order.tel}
+
+- @order.food_orders.each do |o|
+  - if o[:count] != 0
+    %p #{o.food[:name]}
+    %p #{o[:count]}
+    - if o[:taste] != nil
+      %p #{o[:taste]}
+
+%p #{@order[:total_price]}
+
+= link_to "注文確定", orders_path,method: :post

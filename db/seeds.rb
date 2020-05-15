@@ -1,7 +1,55 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Food.create(name: "名物満満焼",price: 140,stock: 0,genre: 0,tasted: true)
+Food.create(name: "ハラミ塩こうじ焼",price: 140,stock: 0,genre: 0,tasted: true)
+Food.create(name: "ホルモン焼",price: 140,stock: 0,genre: 0,tasted: true)
+Food.create(name: "ピートロ",price: 140,stock: 0,genre: 0,tasted: false)
+Food.create(name: "ネギタン塩",price: 140,stock: 0,genre: 0,tasted: true)
+Food.create(name: "タン油",price: 140,stock: 0,genre: 0,tasted: false)
+Food.create(name: "タン",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "ハツ",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "かしら",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "なんこつ",price: 140,stock: 0,genre: 0,tasted: false)
+Food.create(name: "レバー",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "てっぽう",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "コブクロ",price: 120,stock: 0,genre: 0,tasted: false)
+Food.create(name: "あぶら",price: 120,stock: 0,genre: 0,tasted: false)
+
+Food.create(name: "イカのくちばし",price: 140,stock: 0,genre: 1,tasted: false)
+Food.create(name: "とりねぎ",price: 120,stock: 0,genre: 1,tasted: false)
+Food.create(name: "手羽先",price: 240,stock: 0,genre: 1,tasted: false)
+Food.create(name: "つくね",price: 100,stock: 0,genre: 1,tasted: false)
+Food.create(name: "うずら玉子",price: 120,stock: 0,genre: 1,tasted: false)
+Food.create(name: "あらびきウインナー",price: 120,stock: 0,genre: 1,tasted: true)
+
+Food.create(name: "ぎんなん焼",price: 120,stock: 0,genre: 2,tasted: false)
+Food.create(name: "しいたけ焼",price: 120,stock: 0,genre: 2,tasted: false)
+Food.create(name: "長ねぎ焼",price: 120,stock: 0,genre: 2,tasted: false)
+Food.create(name: "ししとう焼",price: 120,stock: 0,genre: 2,tasted: false)
+Food.create(name: "ニンニク焼",price: 120,stock: 0,genre: 2,tasted: true)
+
+Food.create(name: "とり串かつ",price: 150,stock: 0,genre: 3,tasted: true)
+Food.create(name: "レバーかつ",price: 150,stock: 0,genre: 3,tasted: true)
+Food.create(name: "ウインナーあげ",price: 150,stock: 0,genre: 3,tasted: true)
+Food.create(name: "うずら玉子あげ",price: 150,stock: 0,genre: 3,tasted: true)
+
+Food.create(name: "厚揚げ",price: 400,stock: 0,genre: 4,tasted: true)
+Food.create(name: "厚揚げ納豆",price: 500,stock: 0,genre: 4,tasted: true)
+Food.create(name: "ポテトフライ",price: 350,stock: 0,genre: 4,tasted: true)
+Food.create(name: "チーズ揚げ",price: 350,stock: 0,genre: 4,tasted: true)
+Food.create(name: "さつま揚げ",price: 350,stock: 0,genre: 4,tasted: true)
+
+Food.create(name: "ガツ刺し",price: 350,stock: 0,genre: 5,tasted: true)
+Food.create(name: "コブクロ刺し",price: 350,stock: 0,genre: 5,tasted: true)
+Food.create(name: "馬刺し",price: 500,stock: 0,genre: 5,tasted: true)
+
+Food.create(name: "特製もつ煮込み",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "キャベツ特製みそ付",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "塩らっきょう",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "梅きゅう",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "もろきゅう",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "冷しトマト",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "味付けもやし",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "オニオンスライス",price: 280,stock: 0,genre: 6,tasted: true)
+Food.create(name: "オニスラ納豆",price: 380,stock: 0,genre: 6,tasted: true)
+Food.create(name: "お新香盛合せ",price: 350,stock: 0,genre: 6,tasted: true)
+Food.create(name: "マカロニサラダ",price: 350,stock: 0,genre: 6,tasted: true)
+Food.create(name: "ポテトサラダ",price: 350,stock: 0,genre: 6,tasted: true)
