@@ -103,11 +103,11 @@
                   = o.hidden_field :food_id,value: i.id
     
     %h1.price_title 総額
-    %p.tota_price ¥ 0 -
+    %p.total_price ¥ 0 -
     .confirm_areas
-      .confirm_area
-        %p.confirm_area--name
-        %p.confirm_area--price
+      -# .confirm_area{data:{confirm_id: 0}}
+      -#   %p.confirm_area--name なし
+      -#   %p.confirm_area--price ¥0
 
     %h1.info_title お送り先情報
     .name_field

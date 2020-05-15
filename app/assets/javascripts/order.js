@@ -1,6 +1,36 @@
 $(document).on('turbolinks:load', function() { 
 
-  let counts =document.getElementsByClassName("menu__select--count") 
+  let totalPrice= 0
+
+  let counts =document.getElementsByClassName("menu__select--count")
+
+  function appendConfirm(data){
+    if(data.count != 0){
+      let html = `<div class="confirm_area" data-confirm-id="${data.id}" data-confirm-price="${data.price}">
+                    <p class="confirm_area--name">${data.name} ${data.count}個</p>
+                    <p class="confirm_area--price">¥ ${data.price} -</p>
+                  </div>`
+      $('.confirm_areas').append(html)
+      let totalPriceView = document.getElementsByClassName("total_price")
+      totalPrice += data.price
+      totalPriceView[0].textContent = '¥ '+totalPrice
+    }
+  }
+
+  function checkOrder(data){
+    var orders = document.getElementsByClassName("confirm_area")
+    for(let $i = 0;$i<orders.length;$i++){
+      let id = orders[$i].getAttribute("data-confirm-id")
+      let delPrice = orders[$i].getAttribute("data-confirm-price")
+      if(id == data.id){
+        let delPrice = orders[$i].getAttribute("data-confirm-price")
+        totalPrice -= Number(delPrice)
+        let totalPriceView = document.getElementsByClassName("total_price")
+        totalPriceView[0].textContent = '¥ '+totalPrice
+        orders[$i].remove()
+      }
+    }
+  }
   
   for(let $i = 0;$i<counts.length;$i++){
     counts[$i].addEventListener("change",function(){
@@ -13,8 +43,14 @@ $(document).on('turbolinks:load', function() {
         dataType: "json"
       })
       .done(function(data){
-        console.log(data.id)
-        console.log(data.count)
+        if(data.count >= 0 && data.count <= data.stock){
+          checkOrder(data)
+          appendConfirm(data)
+        }
+        else if(data.count > data.stock)
+        {
+          alert("申し訳ございません、"+data.name+"は残り"+data.stock+"個です")
+        }
       })
       .fail(function(){
         alert("通信に失敗しました")

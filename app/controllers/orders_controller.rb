@@ -16,8 +16,12 @@ class OrdersController < ApplicationController
   end
 
   def data
-    @food = Food.
-    @count = params[:count]
+    food = Food.find(params[:id])
+    @id = food.id
+    @name = food.name
+    @count = params[:count].to_i
+    @price = food.price * @count
+    @stock = food.stock
   end
 
 
