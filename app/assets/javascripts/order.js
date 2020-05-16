@@ -60,6 +60,7 @@ $(document).on('turbolinks:load', function() {
         {
           alert("申し訳ございません、"+data.name+"は残り"+data.stock+"個です")
           resetVal(data)
+          checkOrder(data)
         }
       })
       .fail(function(){

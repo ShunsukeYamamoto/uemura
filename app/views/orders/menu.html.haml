@@ -119,7 +119,4 @@
     .tel_field
       %p ・電話番号
       = f.number_field :tel,placeholder: "例:03-5668-9494"
-    .accept_time_field
-      %p  ・受け取り日
-      = f.datetime_select :accept_time,class: "accept_form",use_month_numbers: true,default: Time.now,discard_year: true,datetime_separator: '<h4 class="fb-txt font-weight-bold my-2">時間</h4>'
     = f.submit "注文を確定する"
