@@ -31,6 +31,15 @@ $(document).on('turbolinks:load', function() {
       }
     }
   }
+
+  function resetVal(data){
+    forms = document.querySelectorAll('[data-food-id]')
+    for(let i = 0;i<forms.length;i++){
+      if(forms[i].getAttribute("data-food-id") == data.id){
+        forms[i].value = 0
+      }
+    }
+  }
   
   for(let $i = 0;$i<counts.length;$i++){
     counts[$i].addEventListener("change",function(){
@@ -50,6 +59,7 @@ $(document).on('turbolinks:load', function() {
         else if(data.count > data.stock)
         {
           alert("申し訳ございません、"+data.name+"は残り"+data.stock+"個です")
+          resetVal(data)
         }
       })
       .fail(function(){
