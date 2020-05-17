@@ -1,0 +1,3 @@
+class TimeManagement < ApplicationRecord
+  
+end

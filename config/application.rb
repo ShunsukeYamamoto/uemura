@@ -13,6 +13,8 @@ module Uemura
 
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+
+    config.logger = Logger.new(STDOUT)
     
     config.generators do |g|
       g.stylesheets false

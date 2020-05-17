@@ -53,3 +53,19 @@ Food.create(name: "オニスラ納豆",price: 380,stock: 0,genre: 6,tasted: true
 Food.create(name: "お新香盛合せ",price: 350,stock: 0,genre: 6,tasted: true)
 Food.create(name: "マカロニサラダ",price: 350,stock: 0,genre: 6,tasted: true)
 Food.create(name: "ポテトサラダ",price: 350,stock: 0,genre: 6,tasted: true)
+
+TimeManagement.create(time_zone: "16時00分~16時20分",reserved: false)
+TimeManagement.create(time_zone: "16時20分~16時40分",reserved: false)
+TimeManagement.create(time_zone: "16時40分~17時00分",reserved: false)
+
+TimeManagement.create(time_zone: "17時00分~17時20分",reserved: false)
+TimeManagement.create(time_zone: "17時20分~17時40分",reserved: false)
+TimeManagement.create(time_zone: "17時40分~18時00分",reserved: false)
+
+TimeManagement.create(time_zone: "18時00分~18時20分",reserved: false)
+TimeManagement.create(time_zone: "18時20分~18時40分",reserved: false)
+TimeManagement.create(time_zone: "18時40分~19時00分",reserved: false)
+
+TimeManagement.create(time_zone: "19時00分~19時20分",reserved: false)
+TimeManagement.create(time_zone: "19時20分~19時40分",reserved: false)
+TimeManagement.create(time_zone: "19時40分~20時00分",reserved: false)

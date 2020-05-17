@@ -8,11 +8,16 @@ class OrdersController < ApplicationController
     @order.food_orders.each do |m|
       if m.count != 0
         @order[:total_price] += (m.food[:price] * m.count)
+        m.food[:stock] -= m.count
+        m.food.save
       else
         m.delete
       end
     end
     @order.save
+    time = TimeManagement.find(@order[:time_management_id])
+    time[:reserved] = true
+    time.save
   end
 
   def data
@@ -29,7 +34,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name,:address,:tel,:total_price,done: false,food_orders_attributes: [:food_id,:count,:taste])
+    params.require(:order).permit(:name,:address,:tel,:total_price,:time_management_id,done: false,food_orders_attributes: [:food_id,:count,:taste])
   end
 
 end
