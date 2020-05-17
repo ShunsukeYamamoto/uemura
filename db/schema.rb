@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_084007) do
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
-    t.integer "tel", null: false
+    t.string "tel", null: false
     t.integer "total_price", default: 0, null: false
     t.boolean "done", default: false
     t.integer "time_management_id"

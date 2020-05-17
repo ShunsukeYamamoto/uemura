@@ -1,0 +1,12 @@
+%h1 ご注文有り難うございます
+%h1 こちらの画面は保存して下さい
+
+%p お届け先
+%p #{@order[:name]} 様
+%p #{@order[:address]}
+%p #{@order[:tel]}
+
+%p ご注文内容
+-@food_orders.each do |f|
+  %p #{f.food[:name]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
+%p 総額 ¥ #{@order[:total_price]} -

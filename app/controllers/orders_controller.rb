@@ -18,6 +18,14 @@ class OrdersController < ApplicationController
     time = TimeManagement.find(@order[:time_management_id])
     time[:reserved] = true
     time.save
+    redirect_to order_path(@order)
+  end
+
+  def show
+    @order = Order.find(params[:id])
+    @food_orders = @order.food_orders
+    @time = TimeManagement.find(@order[:time_management_id])
+    # binding.pry
   end
 
   def data
@@ -28,8 +36,6 @@ class OrdersController < ApplicationController
     @price = food.price * @count
     @stock = food.stock
   end
-
-
 
   private
 

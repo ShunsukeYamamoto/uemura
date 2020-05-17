@@ -118,7 +118,7 @@
       = f.text_field :address,placeholder: "例:南小岩7-25-12"
     .tel_field
       %p ・電話番号
-      = f.number_field :tel,placeholder: "例:03-5668-9494"
+      = f.text_field :tel,placeholder: "例:03-5668-9494"
     .time_field
       %p ・配達希望時間帯
       = f.collection_select :time_management_id,TimeManagement.all.where(reserved: false),:id,:time_zone
