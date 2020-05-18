@@ -1,4 +1,20 @@
 class OrdersController < ApplicationController
+
+  def index
+    @order = Order.all.where(done: false)
+    # binding.pry
+  end
+
+  def done
+    order = Order.find(params[:id])
+    time = TimeManagement.find(order[:time_management_id])
+    order.destroy
+    time[:reserved] = false
+    time.save
+    binding.pry
+    redirect_to orders_path
+  end
+
   def menu
     @order = Order.new
   end

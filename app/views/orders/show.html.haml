@@ -10,3 +10,10 @@
 -@food_orders.each do |f|
   %p #{f.food[:name]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
 %p 総額 ¥ #{@order[:total_price]} -
+
+%p お届け時間帯
+%p #{@time[:time_zone]}
+
+= link_to "←再注文",orders_menu_path
+
+= link_to "完了",done_order_path(@order),method: :delete
