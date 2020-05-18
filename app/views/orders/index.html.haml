@@ -10,10 +10,13 @@
   - TimeManagement.all.each do |t|
     - if Order.find_by(time_management_id: t.id).present?
     - order = Order.find_by(time_management_id: t.id)
-      %tr
+      %tr.order_table{data:{order_id: order.id}}
         %td #{order[:name]}
         %td #{order[:address]}
         %td #{order[:tel]}
         %td ¥ #{order[:total_price]} -
         %td #{link_to "詳細",order_path(order)}
+%br/
+
+= link_to "在庫入力",stocks_path
 

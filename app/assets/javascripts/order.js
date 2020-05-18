@@ -48,7 +48,7 @@ $(document).on('turbolinks:load', function() {
       $.ajax({
         type: "get",
         data: {id: food_id,count: val},
-        url: "/orders/data",
+        url: "/orders/food_data",
         dataType: "json"
       })
       .done(function(data){
@@ -64,6 +64,7 @@ $(document).on('turbolinks:load', function() {
         }
       })
       .fail(function(){
+        d
         alert("通信に失敗しました")
       })
     })

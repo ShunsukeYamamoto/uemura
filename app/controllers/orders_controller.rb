@@ -44,13 +44,18 @@ class OrdersController < ApplicationController
     # binding.pry
   end
 
-  def data
+  def food_data
     food = Food.find(params[:id])
     @id = food.id
     @name = food.name
     @count = params[:count].to_i
     @price = food.price * @count
     @stock = food.stock
+  end
+
+  def order_data
+    @order = Order.last
+    # binding.pry
   end
 
   private
