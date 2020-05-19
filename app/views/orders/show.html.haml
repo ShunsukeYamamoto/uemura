@@ -1,0 +1,23 @@
+%h1 ご注文有り難うございます
+%h1 こちらの画面は保存して下さい
+
+%p お届け先
+%p #{@order[:name]} 様
+%p #{@order[:address]}
+%p #{@order[:tel]}
+
+%p ご注文内容
+-@food_orders.each do |f|
+  %p #{f.food[:name]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
+%p 総額 ¥ #{@order[:total_price]} -
+
+%p お届け時間帯
+%p #{@time[:time_zone]}
+
+- if user_signed_in?
+  = link_to "完了",done_order_path(@order),method: :delete
+  =link_to "オーダー一覧",orders_path
+- else
+  = link_to "←再注文",orders_menu_path
+
+

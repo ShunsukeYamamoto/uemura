@@ -1,0 +1,25 @@
+%h1 受注オーダー
+
+%table
+  %tr
+    %th 配達時間
+    %th お名前
+    %th 住所
+    %th 電話番号
+    %th 総額
+    %th
+  - TimeManagement.all.each do |t|
+    - if Order.find_by(time_management_id: t.id).present?
+    - order = Order.find_by(time_management_id: t.id)
+      %tr.order_table{data:{order_id: order.id}}
+        %td #{t[:time_zone]}
+        %td #{order[:name]}
+        %td #{order[:address]}
+        %td #{order[:tel]}
+        %td ¥ #{order[:total_price]} -
+        %td #{link_to "詳細",order_path(order)}
+%br/
+
+= link_to "在庫入力",stocks_path
+= link_to "ログアウト",destroy_user_session_path,method: :delete
+

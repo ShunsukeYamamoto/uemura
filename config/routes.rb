@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  devise_for :users
+  root "home#index"
+  get "orders/menu" => "orders/menu"
+  get "orders/food_data" => "orders/food_data"
+  get "orders/order_data" => "orders/order_data"
+  resources :orders,only: [:show,:index] do
+    member do
+      delete :done
+    end
+  end
+  get "stocks" => "stocks#index"
+  put "stocks" => "stocks#update"
+  resources :orders,only: :create
 end
