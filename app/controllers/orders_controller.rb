@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
 
+  before_action :authenticate,except: [:show,:menu]
+
   def index
     @order = Order.all.where(done: false)
-    # binding.pry
   end
 
   def done
@@ -11,7 +12,6 @@ class OrdersController < ApplicationController
     order.destroy
     time[:reserved] = false
     time.save
-    binding.pry
     redirect_to orders_path
   end
 
@@ -41,7 +41,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @food_orders = @order.food_orders
     @time = TimeManagement.find(@order[:time_management_id])
-    # binding.pry
   end
 
   def food_data
@@ -55,13 +54,18 @@ class OrdersController < ApplicationController
 
   def order_data
     @order = Order.last
-    # binding.pry
   end
 
   private
 
   def order_params
     params.require(:order).permit(:name,:address,:tel,:total_price,:time_management_id,done: false,food_orders_attributes: [:food_id,:count,:taste])
+  end
+
+  def authenticate
+    unless user_signed_in?
+      redirect_to orders_menu_path
+    end
   end
 
 end

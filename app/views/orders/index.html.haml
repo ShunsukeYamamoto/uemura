@@ -2,6 +2,7 @@
 
 %table
   %tr
+    %th 配達時間
     %th お名前
     %th 住所
     %th 電話番号
@@ -11,6 +12,7 @@
     - if Order.find_by(time_management_id: t.id).present?
     - order = Order.find_by(time_management_id: t.id)
       %tr.order_table{data:{order_id: order.id}}
+        %td #{t[:time_zone]}
         %td #{order[:name]}
         %td #{order[:address]}
         %td #{order[:tel]}
@@ -19,4 +21,5 @@
 %br/
 
 = link_to "在庫入力",stocks_path
+= link_to "ログアウト",destroy_user_session_path,method: :delete
 

@@ -15,6 +15,8 @@ module Uemura
     config.active_record.default_timezone = :local
 
     # config.logger = Logger.new(STDOUT)
+
+    config.i18n.default_locale = :ja
     
     config.generators do |g|
       g.stylesheets false

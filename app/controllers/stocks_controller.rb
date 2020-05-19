@@ -1,4 +1,7 @@
 class StocksController < ApplicationController
+
+  before_action :authenticate
+
   def index
     @foods = Food.all
   end
@@ -16,5 +19,11 @@ class StocksController < ApplicationController
 
   def food_params
     params.permit(foods: :stock)[:foods]
+  end
+
+  def authenticate
+    unless user_signed_in?
+      redirect_to orders_menu_path
+    end
   end
 end

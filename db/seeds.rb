@@ -69,3 +69,5 @@ TimeManagement.create(time_zone: "18時40分~19時00分",reserved: false)
 TimeManagement.create(time_zone: "19時00分~19時20分",reserved: false)
 TimeManagement.create(time_zone: "19時20分~19時40分",reserved: false)
 TimeManagement.create(time_zone: "19時40分~20時00分",reserved: false)
+
+User.create(email: "koiwa.ekumasu@gmail.com",password: "uemura",password_confirmation: "uemura")
