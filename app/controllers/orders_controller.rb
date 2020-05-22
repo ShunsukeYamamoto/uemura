@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate,except: [:show,:menu,:food_data,:order_data]
+  before_action :authenticate,only: [:index,:done]
 
   def index
     @order = Order.all.where(done: false)
@@ -20,7 +20,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    binding.pry
     @order = Order.new(order_params)
     @order.food_orders.each do |m|
       if m.count != 0
