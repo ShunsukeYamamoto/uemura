@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root "home#index"
+  get "pages/menu" => "pages/menu"
+  get "pages/pride" => "pages/pride"
+  get "pages/contact" => "pages/contact"
+  get "pages/reservation" => "pages/reservation"
   get "orders/menu" => "orders/menu"
   get "orders/food_data" => "orders/food_data"
   get "orders/order_data" => "orders/order_data"

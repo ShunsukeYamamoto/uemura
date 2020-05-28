@@ -1,0 +1,20 @@
+.header
+  .header__rogo
+    %p.shop_name.shop_name__sub もつ焼き
+    %p.shop_name.shop_name__main 植むら
+  .header__nav
+    %p
+      =link_to root_path,class: "header__nav--home" do
+        Home
+    %p
+      =link_to pages_menu_path,class: "header__nav--menu" do
+        お品書き
+    %p
+      =link_to "#",class: "header__nav--concept" do
+        こだわり
+    %p
+      =link_to pages_contact_path,class: "header__nav--access" do
+        アクセス
+    %p
+      =link_to "#",class: "header__nav--reservation" do
+        ご予約
