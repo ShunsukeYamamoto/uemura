@@ -16,6 +16,8 @@
     background-color: rgba(255, 255, 255, 0.637);
     display: flex;
     justify-content: space-between;
+    border-top: solid 5px #1e1b41;
+    border-bottom: solid 5px #1e1b41;
     &__rogo{
       .shop_name{
         font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
