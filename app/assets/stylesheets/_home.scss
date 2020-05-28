@@ -1,10 +1,10 @@
 .top_container{
-  width: 100vw;
+  width: 100%;
   &__home{
     background-image: url(uemura3.jpg);
     background-size: cover;
     background-position: center center;
-    height: 85vh;
+    height: 100vh;
   }
   .header{
     width: 100vw;
@@ -13,14 +13,11 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.637);
+    background-color: rgba(207, 207, 207, 0.329);
     display: flex;
     justify-content: space-between;
-    border-top: solid 5px #1e1b41;
-    border-bottom: solid 5px #1e1b41;
     &__rogo{
       .shop_name{
-        font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
         margin-left: 13vw;
         font-weight: bold;
         text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -37,7 +34,6 @@
     }
     &__nav{
       display: flex;
-      font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
       font-weight: bold;
       margin-right: 15vw;
       p{
@@ -72,7 +68,6 @@
       padding: 15px;
       h1{
         text-align: center;
-        font-family: serif;
         font-size: 30px;
         margin-bottom: 4vh;
       }
@@ -103,58 +98,9 @@
       border-radius: 10px;
     }
   }
-  // .nav_container{
-  //   height: 100vh;
-  //   width: 100vw;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   padding: 20vh 10vw;
-  //   .link_box{
-  //     width: 23vw;
-  //     height: 60vh;
-  //     background-color: wheat;
-  //     .image-wrapper{
-  //       border-radius: 200px;
-  //       width: 200px;
-  //       height: 200px;
-  //       box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //       overflow: hidden;
-  //       margin: auto;
-  //       margin-top: 40px;
-  //       border: solid 5px white;
-  //       img{
-  //         height: 200px;
-  //       }
-  //     }
-  //     .link_title{
-  //       text-align: center;
-  //       font-family: serif;
-  //       font-size: 30px;
-  //       margin-top: 30px;
-  //       font-weight: bold;
-  //       // color: white;
-  //       // text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-  //     }
-  //     .link_icon{
-  //       font-family: Arial,Helvetica,sans-serif;
-  //       font: normal normal normal 18px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-  //       text-align: center;
-  //       margin: auto;
-  //       margin-top: 25px;
-  //       background-color: rgba(255, 255, 255, 0.39);
-  //       width: 8vw;
-  //       line-height: 35px;
-  //       border-radius: 3px;
-  //       color: rgba(0, 0, 0, 0.678);
-  //       &:hover{
-  //         background-color: rgba(255, 255, 255, 0.507);
-  //       }
-  //     }
-  //   }
-  // }
+  .photo_container{
+    height: 60vh;
+  }
 }
 .footer{
   width: 100vw;

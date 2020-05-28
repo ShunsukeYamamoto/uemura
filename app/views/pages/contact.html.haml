@@ -2,14 +2,15 @@
   = render "shared/header"
   .image-wrapper
     =image_tag "uemura7.png", class: "inside-image"
-.details-container
-  %p.number 03-3401-2384
-  %p 東京都港区赤坂９丁目６
-  %p Open 16:00~24：00（L.O 23：30）
-  %p 水曜日定休
-  .details-container__button
-    =link_to "#" do
-      ご予約 >
-.map_container
-  %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12963.920245692574!2d139.7217810302597!3d35.67749293730433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7eb944d96f%3A0x4a07c582f2962c92!2z5LmD5pyo5Z2C!5e0!3m2!1sja!2sjp!4v1590659663389!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "600"}
+.paer-background
+  .details-container
+    %p.shop-detail.number 03-3401-2384
+    %p.shop-detail 東京都港区赤坂９丁目６
+    %p.shop-detail Open 16:00~24：00（L.O 23：30）
+    %p.shop-detail 水曜日定休
+    .details-container__button
+      =link_to "#" do
+        ご予約 >
+  .map_container
+    %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12963.920245692574!2d139.7217810302597!3d35.67749293730433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7eb944d96f%3A0x4a07c582f2962c92!2z5LmD5pyo5Z2C!5e0!3m2!1sja!2sjp!4v1590659663389!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "600"}
 = render "shared/footer"
