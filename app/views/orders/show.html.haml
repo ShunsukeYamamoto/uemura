@@ -9,6 +9,8 @@
 %p ご注文内容
 -@food_orders.each do |f|
   %p #{f.food[:name]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
+  - if f.food[:tasted] == false
+    %p #{f[:taste]}
 %p 総額 ¥ #{@order[:total_price]} -
 
 %p お届け時間帯

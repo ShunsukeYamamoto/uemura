@@ -101,26 +101,26 @@
                     = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
                   = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: i.id}
                   = o.hidden_field :food_id,value: i.id
-    
-    %h1.price_title 総額
-    %p.total_price ¥ 0 -
-    .confirm_areas
-      -# .confirm_area{data:{confirm_id: 0}}
-      -#   %p.confirm_area--name なし
-      -#   %p.confirm_area--price ¥0
-
-    %h1.info_title お送り先情報
-    .name_field
-      %p ・お名前
-      = f.text_field :name,placeholder: "お名前"
-    .address_field
-      %p ・住所
-      = f.text_field :address,placeholder: "例:南小岩7-25-12"
-    .tel_field
-      %p ・電話番号
-      = f.text_field :tel,placeholder: "例:03-5668-9494"
-    .time_field
-      %p ・配達希望時間帯
-      = f.collection_select :time_management_id,TimeManagement.all.where(reserved: false),:id,:time_zone
+    .price_field
+      %p.price_field--title ご注文内容確認
+      %p.price_title 総額
+      %p.total_price ¥ 0 -
+      .confirm_areas
       
-    = f.submit "注文を確定する"
+    
+    %h1.info_title お送り先情報
+    .info_field
+      .name_field
+        %p ・お名前
+        = f.text_field :name,placeholder: "お名前"
+      .address_field
+        %p ・住所
+        = f.text_field :address,placeholder: "例:南小岩7-25-12"
+      .tel_field
+        %p ・電話番号
+        = f.text_field :tel,placeholder: "例:03-5668-9494"
+      .time_field
+        %p ・配達希望時間帯
+        = f.collection_select :time_management_id,TimeManagement.all.where(reserved: false),:id,:time_zone
+    .submit_area
+      = f.submit "注文を確定する",class: "order_submit",data:{confirm: "ご注文は以上でよろしいですか？"}

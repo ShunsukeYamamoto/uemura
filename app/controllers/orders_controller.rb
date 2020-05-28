@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate,except: [:show,:menu]
+  before_action :authenticate,only: [:index,:done]
 
   def index
     @order = Order.all.where(done: false)

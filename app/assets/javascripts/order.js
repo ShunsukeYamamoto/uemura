@@ -64,11 +64,10 @@ $(document).on('turbolinks:load', function() {
         }
       })
       .fail(function(){
-        d
         alert("通信に失敗しました")
       })
     })
   }
-
+  
 });
 
