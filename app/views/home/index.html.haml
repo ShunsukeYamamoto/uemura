@@ -1,24 +1,5 @@
-.top_container
-  .header
-    .header__rogo
-      %p.shop_name.shop_name__sub もつ焼き
-      %p.shop_name.shop_name__main 植むら
-    .header__nav
-      %p
-        =link_to "#",class: "header__nav--home" do
-          Home
-      %p
-        =link_to "#",class: "header__nav--menu" do
-          お品書き
-      %p
-        =link_to "#",class: "header__nav--concept" do
-          こだわり
-      %p
-        =link_to "#",class: "header__nav--access" do
-          アクセス
-      %p
-        =link_to "#",class: "header__nav--reservation" do
-          ご予約
+.top_container.top_container__home
+  = render "shared/header"
 .main_container
   .introduction_container
     .introduction_container__image
@@ -28,32 +9,36 @@
       .block
       %h3
         (test)鶏・豚串は全て『国産』のものを使用しております。特製秘伝の【醤油ダレ】【青唐辛子味噌】につけてお召し上がりいただきます。全卓保温器を設置！いつまでも温かキープ♪大トロ牛もつ焼き串、中落カルビ串は他では味わえません！串以外のメニューも豊富♪チキン南蛮、ホルモン・馬料理、半熟卵揚げた「からたま」は推しです。(test)
-  .nav_container
-    .link_box
-      .image-wrapper
-        =link_to "#" do
-          =image_tag "uemura10.png", class: "inside-image"
-      .link_title
-        お品書き
-      =link_to "#" do
-        .link_icon
-          menu >
-    .link_box
-      .image-wrapper
-        =link_to "#" do
-          =image_tag "uemura9.png", class: "inside-image"
-      .link_title
-        植むらのこだわり
-      =link_to "#" do
-        .link_icon
-          pride >
-    .link_box
-      .image-wrapper
-        =link_to "#" do
-          =image_tag "uemura7.png", class: "inside-image"
-      .link_title
-        お問い合わせ
-      =link_to "#" do
-        .link_icon
-          contact >
+  .video_container
+    %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "100%", :src => "https://www.youtube.com/embed/f0wbnQw89J0", :width => "80%"}
+  -# .nav_container
+  -#   .link_box
+  -#     .image-wrapper
+  -#       =link_to "#" do
+  -#         =image_tag "uemura10.png", class: "inside-image"
+  -#     .link_title
+  -#       お品書き
+  -#     =link_to "#" do
+  -#       .link_icon
+  -#         menu >
+  -#   .link_box
+  -#     .image-wrapper
+  -#       =link_to "#" do
+  -#         =image_tag "uemura9.png", class: "inside-image"
+  -#     .link_title
+  -#       植むらのこだわり
+  -#     =link_to "#" do
+  -#       .link_icon
+  -#         pride >
+  -#   .link_box
+  -#     .image-wrapper
+  -#       =link_to "#" do
+  -#         =image_tag "uemura7.png", class: "inside-image"
+  -#     .link_title
+  -#       お問い合わせ
+  -#     =link_to "#" do
+  -#       .link_icon
+  -#         contact >
+
+
 .footer

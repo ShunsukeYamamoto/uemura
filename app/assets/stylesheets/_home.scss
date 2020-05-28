@@ -1,9 +1,11 @@
 .top_container{
   width: 100vw;
-  height: 85vh;
-  background-image: url(uemura3.jpg);
-  background-size: cover;
-  background-position: center center;
+  &__home{
+    background-image: url(uemura3.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 85vh;
+  }
   .header{
     width: 100vw;
     height: 15vh;
@@ -50,7 +52,6 @@
 }
 .main_container{
   background-color: rgb(255, 255, 255);
-  height: 250vh;
   .introduction_container{
     width: 100vw;
     display: flex;
@@ -87,64 +88,74 @@
       }
     }
   }
-  .nav_container{
+  .video_container{
     height: 100vh;
     width: 100vw;
     background-image: url(uemura6.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    justify-content: space-between;
-    padding: 20vh 10vw;
-    .link_box{
-      width: 23vw;
-      height: 60vh;
-      background-color: rgba(255, 255, 255, 0.493);
-      .image-wrapper{
-        border-radius: 200px;
-        width: 200px;
-        height: 200px;
-        box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin: auto;
-        margin-top: 40px;
-        border: solid 5px white;
-        img{
-          height: 200px;
-        }
-      }
-      .link_title{
-        text-align: center;
-        font-family: serif;
-        font-size: 30px;
-        margin-top: 30px;
-        font-weight: bold;
-        // color: white;
-        // text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-      }
-      .link_icon{
-        font-family: Arial,Helvetica,sans-serif;
-        font: normal normal normal 18px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-        text-align: center;
-        margin: auto;
-        margin-top: 25px;
-        background-color: rgba(255, 255, 255, 0.39);
-        width: 8vw;
-        line-height: 35px;
-        border-radius: 3px;
-        color: rgba(0, 0, 0, 0.678);
-        &:hover{
-          background-color: rgba(255, 255, 255, 0.507);
-        }
-      }
+    padding: 10vh 10vw;
+    iframe{
+      margin: auto;
+      border-radius: 10px;
     }
   }
+  // .nav_container{
+  //   height: 100vh;
+  //   width: 100vw;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   padding: 20vh 10vw;
+  //   .link_box{
+  //     width: 23vw;
+  //     height: 60vh;
+  //     background-color: wheat;
+  //     .image-wrapper{
+  //       border-radius: 200px;
+  //       width: 200px;
+  //       height: 200px;
+  //       box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       overflow: hidden;
+  //       margin: auto;
+  //       margin-top: 40px;
+  //       border: solid 5px white;
+  //       img{
+  //         height: 200px;
+  //       }
+  //     }
+  //     .link_title{
+  //       text-align: center;
+  //       font-family: serif;
+  //       font-size: 30px;
+  //       margin-top: 30px;
+  //       font-weight: bold;
+  //       // color: white;
+  //       // text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  //     }
+  //     .link_icon{
+  //       font-family: Arial,Helvetica,sans-serif;
+  //       font: normal normal normal 18px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  //       text-align: center;
+  //       margin: auto;
+  //       margin-top: 25px;
+  //       background-color: rgba(255, 255, 255, 0.39);
+  //       width: 8vw;
+  //       line-height: 35px;
+  //       border-radius: 3px;
+  //       color: rgba(0, 0, 0, 0.678);
+  //       &:hover{
+  //         background-color: rgba(255, 255, 255, 0.507);
+  //       }
+  //     }
+  //   }
+  // }
 }
 .footer{
   width: 100vw;
   height: 30vh;
-  background-color: #0b0452;
+  background-color: #1e1b41;
 }
