@@ -6,10 +6,17 @@
   overflow: hidden;
   margin: auto;
   margin-top: 5vh;
-  border: solid 5px white;
+  border: solid 15px #1e1b41;
   img{
     height: 100%;
   }
+}
+.paer-background{
+  margin: 5vh 10vw;
+  padding: 5vh 0;
+  background-image: url(p0074_l.jpg);
+  background-size: cover;
+  box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
 }
 .details-container{
   width: 100%;
@@ -39,8 +46,8 @@
   }
 }
 .map_container{
-  width: 100vw;
-  padding: 0 20vw;
+  width: 100%;
+  padding: 0 10vw;
   margin: 10vh 0;
   iframe{
     width: 100%;
