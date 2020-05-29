@@ -92,4 +92,20 @@
 .pride-title{
   font-size: 30px;
   text-align: center;
+  margin-bottom: 20px;
+}
+.pride-text{
+  font-size: 20px;
+  margin: auto;
+  width: 60%;
+  line-height: 35px;
+}
+
+.pride-image{
+  width: 80%;
+  height: 80vh;
+  background-image: url(uemura10.jpg);
+  background-size: cover;
+  margin: 30px auto;
+  background-position: center;
 }
