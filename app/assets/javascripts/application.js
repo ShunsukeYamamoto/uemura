@@ -16,3 +16,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).on('ready', function() {
+  $(".full-screen").slick({
+    centerMode: true,
+    centerPadding: '5%',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"></button>'
+  });
+});
