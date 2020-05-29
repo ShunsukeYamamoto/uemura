@@ -22,7 +22,7 @@ $(document).on('ready', function() {
     centerMode: true,
     centerPadding: '5%',
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     speed: 1000,
     infinite: true,
     prevArrow: '<button class="slide-arrow prev-arrow"></button>',
