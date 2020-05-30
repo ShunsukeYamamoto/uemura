@@ -7,6 +7,11 @@
   margin-top: 5vh;
   text-align: center;
   padding: 20px 0;
+  @media (max-width: 500px) {
+    line-height: 18px;
+    width: 70vw;
+    height: 70vw;
+  }
   img{
     height: 100%;
   }
@@ -17,11 +22,22 @@
   background-image: url(p0074_l.jpg);
   background-size: cover;
   box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
+  @media (max-width: 1000px) {
+    margin: 3vh 3vw;
+  }
+  @media (max-width: 450px) {
+    font-size: 20px;
+    line-height: 1.2em;
+    padding: 2vh 0;
+  }
 }
 .details-container{
   width: 100%;
   margin-top: 5vh;
   text-align: center;
+  @media (max-width: 450px) {
+    margin-top: 2vh;
+  }
   .shop-detail{
     text-align: center;
     font-size: 20px;
@@ -49,64 +65,4 @@
       color: white;
     }
   }
-}
-.map_container{
-  width: 100%;
-  padding: 0 10vw;
-  margin: 10vh 0;
-  iframe{
-    width: 100%;
-  }
-}
-.box-wrapper{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  // background-color: yellow;
-  // border: 4px solid rgb(43, 255, 0);
-  padding: 0 70px;
-}
-.List-box{
-  width: 40%;
-  .list-title{
-    font-size: 30px;
-    text-align: center;
-    margin: 10px 0;
-  }
-}
-.item-box{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  p{
-    font-size: 20px;
-  }
-}
-.menu-title{
-  font-size: 40px;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.pride-title{
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.pride-text{
-  font-size: 20px;
-  margin: auto;
-  width: 60%;
-  line-height: 35px;
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 18px;
-  }
-}
-.pride-image{
-  width: 80%;
-  height: auto;
-  margin: 30px 0;
 }
