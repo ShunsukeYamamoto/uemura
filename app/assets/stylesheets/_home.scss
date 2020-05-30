@@ -6,36 +6,6 @@
     background-position: center center;
     height: 55vw;
   }
-  .header{
-    width: 100vw;
-    height: 100px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: rgba(207, 207, 207, 0.329);
-    display: flex;
-    justify-content: space-between;
-    &__rogo{
-      width: auto;
-      height: 100px;
-      margin-left: 10vw;
-    }
-    &__nav{
-      display: flex;
-      font-weight: bold;
-      margin-right: 15vw;
-      p{
-        margin-right: 5vw;
-        line-height: 100px;
-        text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-        &:hover{
-          transform: translateY(-2px);
-          transition: all .3s;
-        }
-      }
-    }
-  }
 }
 .main_container{
   background-color: rgb(255, 255, 255);
