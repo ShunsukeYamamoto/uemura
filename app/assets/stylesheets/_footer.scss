@@ -1,8 +1,59 @@
 .footer{
   width: 100vw;
-  height: 30vh;
   background-color: #1e1b41;
-  display: flex;
-  .left-box{
+  text-align: center;
+  padding: 30px 0;
+  @media (max-width: 500px) {
+    padding-bottom: 80px;
+  }
+  &__rogo{
+    width: auto;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    @media (max-width: 500px) {
+      height: 50px;
+      margin: 0 auto;
+    }
+  }
+  .details-box{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    p{
+      color: white;
+    }
+    .number{
+      font-size: 25px;
+    }
+  }
+  &_nav{
+    @media (min-width: 501px) {
+    }
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: auto;
+    @media (max-width: 800px) {
+      width: 80vw;
+    }
+    @media (max-width: 500px) {
+      width: 90vw;
+    }
+    p{
+      width: 100%;
+    }
+    p+p{
+      @media (min-width: 501px) {
+        border-left: 1px solid white;
+      }
+    }
+    a{
+      color: white;
+      @media (max-width: 500px) {
+        font-size: 12px;
+      }
+    }
   }
 }
