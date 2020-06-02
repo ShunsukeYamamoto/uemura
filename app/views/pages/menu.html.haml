@@ -9,78 +9,59 @@
     .box-wrapper
       .List-box
         .list-title
-          串焼き
-        .item-box
-          %p 名物満満焼
-          %p.price 140yen
-        .item-box
-          %p ハラミ塩こうじ焼
-          %p.price 140yen
-        .item-box
-          %p ホルモン焼
-          %p.price 140yen
-        .item-box
-          %p ピートロ
-          %p.price 140yen
-        .item-box
-          %p ネギタン塩
-          %p.price 140yen
-        .item-box
-          %p タン油
-          %p.price 140yen
-        .item-box
-          %p タン
-          %p.price 120yen
-        .item-box
-          %p ハツ
-          %p.price 120yen
-        .item-box
-          %p かしら
-          %p.price 120yen
-        .item-box
-          %p なんこつ
-          %p.price 140yen
-        .item-box
-          %p あらびきウインナー
-          %p.price 120yen
-        .item-box
-          %p 
-          %p.price 0yen
-        .item-box
-          %p 
-          %p.price 0yen
-        .item-box
-          %p 
-          %p.price 0yen
+          豚もつ
+        - @foods.first(14).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
+        .list-title
+          とり・その他
+        - @foods.limit(6).offset(14).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
+        .list-title
+          野菜
+        - @foods.limit(5).offset(20).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
       .List-box
         .list-title
-          野菜串
-        .item-box
-          %p ぎんなん焼
-          %p.price 0yen
-        .item-box
-          %p しいたけ焼
-          %p.price 0yen
-        .item-box
-          %p 長ねぎ焼
-          %p.price 0yen
-        .item-box
-          %p ししとう焼
-          %p.price 0yen
-        .item-box
-          %p ニンニク焼
-          %p.price 0yen
+          串揚げ
+        - @foods.limit(4).offset(25).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
         .list-title
-          小皿
-        .item-box
-          %p 
-          %p.price 0yen
-        .item-box
-          %p 
-          %p.price 0yen
-        .item-box
-          %p 
-          %p.price 0yen
-        .item-box
-          %p 
-          %p.price 0yen
+          揚げ物
+        - @foods.limit(5).offset(29).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
+        .list-title
+          お刺身
+        - @foods.limit(3).offset(34).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen
+        .list-title
+          一品料理
+        - @foods.limit(12).offset(37).each do |food|
+          .item-box
+            %p
+              #{food.name}
+            %p.price
+              #{food.price}yen

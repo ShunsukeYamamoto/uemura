@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def menu
+    @foods=Food.all
   end
 
   def pride
