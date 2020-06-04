@@ -1,126 +1,135 @@
 .order
   = form_with model: @order,local: true do |f|
-    %h1.order--title もつ焼き 植むら 宅配メニュー
+    %h1.order--title もつ焼き 植むら
+    %h1.order--title 宅配メニュー
     .order__menus
 
+
       .order__menus--0.menu_field
-        %p.menus_title 豚もつ串
-        .menu_area
-          - Food.where(genre: 0).each do |b|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        .menus_title
+          %h2 豚もつ串
+          %p (1本あたり)
+        - Food.where(genre: 0).each do |b|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{b.name}
-                %p.menu--price 1本 ¥#{b.price}
-                .menu__select
-                  - if b.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: b.id}
-                  = o.hidden_field :food_id,value: b.id
+                %p.menu__title #{b.name}
+                %p.menu__price ¥#{b.price}
+              .select_area
+                - if b.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: b.id}
+                = o.hidden_field :food_id,value: b.id
                   
 
       .order__menus--1.menu_field
-        %p.menus_title とり・他串
-        .menu_area
-          - Food.where(genre: 1).each do |t|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        .menus_title
+          %h2 とり・他串
+          %p (1本あたり)
+        - Food.where(genre: 1).each do |t|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{t.name}
-                %p.menu--price 1本 ¥#{t.price}
-                .menu__select
-                  - if t.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: t.id}
-                  = o.hidden_field :food_id,value: t.id
+                %p.menu__title #{t.name}
+                %p.menu__price ¥#{t.price}
+              .select_area
+                - if t.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: t.id}
+                = o.hidden_field :food_id,value: t.id
 
       .order__menus--2.menu_field
-        %p.menus_title 野菜系串
-        .menu_area
-          - Food.where(genre: 2).each do |y|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        .menus_title
+          %h2 野菜串
+          %p (1本あたり)
+        - Food.where(genre: 2).each do |y|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{y.name}
-                %p.menu--price 1本 ¥#{y.price}
-                .menu__select
-                  - if y.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: y.id}
-                  = o.hidden_field :food_id,value: y.id
+                %p.menu__title #{y.name}
+                %p.menu__price ¥#{y.price}
+              .select_area
+                - if y.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: y.id}
+                = o.hidden_field :food_id,value: y.id
 
       .order__menus--3.menu_field
-        %p.menus_title 串揚げ
-        .menu_area
-          - Food.where(genre: 3).each do |k|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        .menus_title
+          %h2 串揚げ
+          %p (1本あたり)
+        - Food.where(genre: 3).each do |k|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{k.name}
-                %p.menu--price 1本 ¥#{k.price}
-                .menu__select
-                  - if k.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: k.id}
-                  = o.hidden_field :food_id,value: k.id
+                %p.menu__title #{k.name}
+                %p.menu__price ¥#{k.price}
+              .select_area
+                - if k.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: k.id}
+                = o.hidden_field :food_id,value: k.id
 
       .order__menus--4.menu_field
         %p.menus_title 揚げ物
-        .menu_area
-          - Food.where(genre: 4).each do |a|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        - Food.where(genre: 4).each do |a|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{a.name}
-                %p.menu--price ¥#{a.price}
-                .menu__select
-                  - if a.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: a.id}
-                  = o.hidden_field :food_id,value: a.id
+                %p.menu__title #{a.name}
+                %p.menu__price ¥#{a.price}
+              .select_area
+                - if a.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: a.id}
+                = o.hidden_field :food_id,value: a.id
 
       .order__menus--5.menu_field
         %p.menus_title お刺身
-        .menu_area
-          - Food.where(genre: 5).where.not(name: "馬刺し").each do |s|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        - Food.where(genre: 5).where.not(name: "馬刺し").each do |s|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{s.name}
-                %p.menu--price ¥#{s.price}
-                .menu__select
-                  - if s.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: s.id}
-                  = o.hidden_field :food_id,value: s.id
+                %p.menu__title #{s.name}
+                %p.menu__price ¥#{s.price}
+              .select_area
+                - if s.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: s.id}
+                = o.hidden_field :food_id,value: s.id
 
       .order__menus--6.menu_field
         %p.menus_title 一品料理
-        .menu_area
-          - Food.where(genre: 6).each do |i|
-            = f.fields_for :food_orders,@order.food_orders.new do |o|
+        - Food.where(genre: 6).each do |i|
+          = f.fields_for :food_orders,@order.food_orders.new do |o|
+            .menu_area
               .menu
-                %p.menu--title #{i.name}
-                %p.menu--price ¥#{i.price}
-                .menu__select
-                  - if i.tasted == false
-                    = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                  = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: i.id}
-                  = o.hidden_field :food_id,value: i.id
+                %p.menu__title #{i.name}
+                %p.menu__price ¥#{i.price}
+              .select_area
+                - if i.tasted == false
+                  = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
+                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: i.id}
+                = o.hidden_field :food_id,value: i.id
     .price_field
       %p.price_field--title ご注文内容確認
       %p.price_title 総額
       %p.total_price ¥ 0 -
       .confirm_areas
-      
     
     %h1.info_title お送り先情報
     .info_field
       .name_field
-        %p ・お名前
+        %p お名前
         = f.text_field :name,placeholder: "お名前"
       .address_field
-        %p ・住所
+        %p 住所
         = f.text_field :address,placeholder: "例:南小岩7-25-12"
       .tel_field
-        %p ・電話番号
+        %p 電話番号
         = f.text_field :tel,placeholder: "例:03-5668-9494"
       .time_field
-        %p ・配達希望時間帯
+        %p 配達希望時間帯
         = f.collection_select :time_management_id,TimeManagement.all.where(reserved: false),:id,:time_zone
     .submit_area
       = f.submit "注文を確定する",class: "order_submit",data:{confirm: "ご注文は以上でよろしいですか？"}
