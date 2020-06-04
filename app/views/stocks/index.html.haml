@@ -1,11 +1,14 @@
-%h1 在庫管理
-%br/
-= form_with url: stocks_path,method: :put do |f|
-  - @foods.each do |food|
-    %p #{food[:name]}
-    = f.fields_for "foods[]", food do |ff|
-      = ff.text_field :stock
-      %br/
-  = f.submit "在庫数更新"
-
-=link_to "オーダー一覧",orders_path
+.admin-container
+  %h1 在庫管理
+  %br/
+  = form_with url: stocks_path,method: :put do |f|
+    - @foods.each do |food|
+      .list-wrapper
+        %p #{food[:name]}
+        = f.fields_for "foods[]", food do |ff|
+          = ff.text_field :stock
+          %br/
+    = f.submit "在庫数更新",class:"sub-button"
+.button-wrapper
+  =link_to "オーダー一覧",orders_path,class:"admin-button"
+  = link_to "ログアウト",destroy_user_session_path,method: :delete, class:"admin-button"

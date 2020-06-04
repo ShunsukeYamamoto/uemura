@@ -1,25 +1,30 @@
-%h1 ご注文有り難うございます
-%h1 こちらの画面は保存して下さい
+.show-container
+  %h1 ご注文有り難うございます!!
+  %h2.red-text こちらの画面は保存して下さい
 
-%p お届け先
-%p #{@order[:name]} 様
-%p #{@order[:address]}
-%p #{@order[:tel]}
+  .customer-details
+    %p ＜お届け先＞
+    %p #{@order[:name]} 様
+    %p 〒 #{@order[:address]}
+    %p Tel #{@order[:tel]}
 
-%p ご注文内容
--@food_orders.each do |f|
-  %p #{f.food[:name]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
-  - if f.food[:tasted] == false
-    %p #{f[:taste]}
-%p 総額 ¥ #{@order[:total_price]} -
+  %p ＜ご注文内容＞
+  -@food_orders.each do |f|
+    %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
+  %h2.total-price 総額 ¥ #{@order[:total_price]} -
 
-%p お届け時間帯
-%p #{@time[:time_zone]}
+  %p ＜お届け時間帯＞
+  %p #{@time[:time_zone]}
+  
+  %h4 #{@order[:id]} #{@order[:created_at].strftime("%Y-%m-%d %H:%M")}
 
 - if user_signed_in?
-  = link_to "完了",done_order_path(@order),method: :delete
-  =link_to "オーダー一覧",orders_path
+  .button-wrapper
+    = link_to "完了",done_order_path(@order),method: :delete,class:"admin-button"
+    =link_to "オーダー一覧",orders_path,class:"admin-button"
 - else
-  = link_to "←再注文",orders_menu_path
-
+  = link_to orders_menu_path do
+    .re-order-button
+      再注文
+  %p.show-number 店舗Tel 03-5668-9494
 

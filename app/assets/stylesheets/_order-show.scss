@@ -1,0 +1,67 @@
+.show-container{
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #1e1b41;
+  border-radius: 10px;
+  h1{
+    font-size: 30px;
+    text-align: center;
+    @media (max-width: 450px) {
+      font-size: 18px;
+    }
+  }
+  h2{
+    font-size: 20px;
+    text-align: center;
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
+  h4{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    @media (max-width: 450px) {
+      font-size: 14px;
+    }
+  }
+  p{
+    text-align: center;
+    font-size: 20px;
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
+  .red-text{
+    color: red;
+  }
+  .customer-details{
+    margin: 10px 0;
+    p+p{
+      padding-top: 2px;
+    }
+  }
+  .total-price{
+    font-family: 'Georgia';
+    padding: 5px 0 10px;
+    text-align: center;
+  }
+}
+.re-order-button{
+  width: 150px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: rgba(209, 38, 38, 0.829);
+  border-radius: 5px;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+}
+.show-number{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+  @media (max-width: 820px) {
+    font-size: 20px;
+  }
+}
