@@ -13,22 +13,20 @@ $(document).on('turbolinks:load', function() {
 
   function checkOrder(){
     id = findLastOrder()
-    if(id != 0 ){
-      $.ajax({
-        type: "get",
-        data: {id: id},
-        url: "/orders/order_data",
-        dataType: "json"
-      })
-      .done(function(data){
-        if(data.id > id){
-          location.reload()
-        }
-      })
-      .fail(function(){
-        alert("通信に失敗しました")
-      })
-    }
+    $.ajax({
+      type: "get",
+      data: {id: id},
+      url: "/orders/order_data",
+      dataType: "json"
+    })
+    .done(function(data){
+      if(data.id > id){
+        location.reload()
+      }
+    })
+    .fail(function(){
+    
+    })
   }
 
   if (document.location.pathname == "/orders"){
