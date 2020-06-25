@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   end
   get "stocks" => "stocks#index"
   put "stocks" => "stocks#update"
+  resources :notices,except: :show
 end

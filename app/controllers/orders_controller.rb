@@ -43,6 +43,14 @@ class OrdersController < ApplicationController
     @time = TimeManagement.find(@order[:time_management_id])
   end
 
+  def create_notices
+    @notice = Notice.new
+  end
+
+  def delete_notices
+    @notice = Notice.all
+  end
+
   def food_data
     food = Food.find(params[:id])
     @id = food.id
