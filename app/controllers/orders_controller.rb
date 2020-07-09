@@ -30,7 +30,11 @@ class OrdersController < ApplicationController
         m.delete
       end
     end
-    @order.save
+    unless @order.save
+      flash[:alert] = "お客様情報を全て記載して下さい"
+      redirect_to orders_menu_path
+      return
+    end
     time = TimeManagement.find(@order[:time_management_id])
     time[:reserved] = true
     time.save
