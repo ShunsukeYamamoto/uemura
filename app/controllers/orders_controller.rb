@@ -30,9 +30,14 @@ class OrdersController < ApplicationController
         m.delete
       end
     end
+    if @order[:total_price] == 0
+      flash[:alert] = "ご注文をご入力下さい"
+      render :menu
+      return
+    end
     unless @order.save
       flash[:alert] = "お客様情報を全て記載して下さい"
-      redirect_to orders_menu_path
+      render :menu
       return
     end
     time = TimeManagement.find(@order[:time_management_id])
