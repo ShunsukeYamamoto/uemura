@@ -67,6 +67,7 @@ class OrdersController < ApplicationController
     @count = params[:count].to_i
     @price = food.price * @count
     @stock = food.stock
+    @genre = food.genre
   end
 
   def order_data
