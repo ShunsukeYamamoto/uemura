@@ -6,10 +6,17 @@ $(document).on('turbolinks:load', function() {
 
   function appendConfirm(data){
     if(data.count != 0){
-      let html = `<div class="confirm_area" data-confirm-id="${data.id}" data-confirm-price="${data.price}">
-                    <p class="confirm_area--name">${data.name} ${data.count}つ</p>
-                    <p class="confirm_area--price">¥ ${data.price} -</p>
-                  </div>`
+      if(data.genre === "揚げ物" || data.genre === "お刺身" || data.genre === "一品料理" ){
+        var html = `<div class="confirm_area" data-confirm-id="${data.id}" data-confirm-price="${data.price}">
+                      <p class="confirm_area--name">${data.name} ${data.count}つ</p>
+                      <p class="confirm_area--price">¥ ${data.price} -</p>
+                    </div>`
+      }else{
+        var html = `<div class="confirm_area" data-confirm-id="${data.id}" data-confirm-price="${data.price}">
+                      <p class="confirm_area--name">${data.name} ${data.count}本</p>
+                      <p class="confirm_area--price">¥ ${data.price} -</p>
+                    </div>`
+      }
       $('.confirm_areas').append(html)
       let totalPriceView = document.getElementsByClassName("total_price")
       totalPrice += data.price

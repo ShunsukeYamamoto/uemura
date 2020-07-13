@@ -10,7 +10,10 @@
 
   %p ＜ご注文内容＞
   -@food_orders.each do |f|
-    %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}つ : ¥ #{f.food[:price] * f[:count]} -
+    - if f.food[:genre] == "揚げ物" || f.food[:genre] == "お刺身" || f.food[:genre] == "一品料理"
+      %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}つ : ¥ #{f.food[:price] * f[:count]} -
+    - else
+      %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}本 : ¥ #{f.food[:price] * f[:count]} -
   %h2.total-price 総額 ¥ #{@order[:total_price]} -
 
   %p ＜お届け時間帯＞
