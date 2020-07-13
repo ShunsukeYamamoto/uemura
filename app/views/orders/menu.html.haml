@@ -83,7 +83,7 @@
               .select_area
                 - if a.tasted == false
                   = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: a.id}
+                = o.number_field :count,placeholder: "個",class: "menu__select--count",data: {food_id: a.id}
                 = o.hidden_field :food_id,value: a.id
 
       .order__menus--5.menu_field
@@ -97,7 +97,7 @@
               .select_area
                 - if s.tasted == false
                   = o.select :taste,options_for_select(FoodOrder.tastes),class: "menu__select--taste"
-                = o.number_field :count,placeholder: "本数",class: "menu__select--count",data: {food_id: s.id}
+                = o.number_field :count,placeholder: "個",class: "menu__select--count",data: {food_id: s.id}
                 = o.hidden_field :food_id,value: s.id
 
       .order__menus--6.menu_field

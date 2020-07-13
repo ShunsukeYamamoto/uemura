@@ -10,7 +10,7 @@
 
   %p ＜ご注文内容＞
   -@food_orders.each do |f|
-    %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}個 : ¥ #{f.food[:price] * f[:count]} -
+    %p ・#{f.food[:name]} #{f[:taste]} #{f[:count]}つ : ¥ #{f.food[:price] * f[:count]} -
   %h2.total-price 総額 ¥ #{@order[:total_price]} -
 
   %p ＜お届け時間帯＞

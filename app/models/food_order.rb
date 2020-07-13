@@ -2,7 +2,7 @@ class FoodOrder < ApplicationRecord
   
 
   enum taste:{
-    "しお": "0",
+    "塩": "0",
     "タレ": "1",
   }
 
