@@ -1,0 +1,13 @@
+.top_container#top_container.top_container__home
+  = render "shared/header"
+
+.notice-show-main-title
+  お知らせ
+.notice-show-container
+  .notice-show-title
+    【#{@notice.title}】
+  .notice-show-content
+    #{@notice.content}
+  
+= render "shared/footer"
+= render "shared/back-to-top-button"

@@ -15,7 +15,8 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def reservation
+  def notice
+    @notice = Notice.find(params[:id])
   end
 
 end
