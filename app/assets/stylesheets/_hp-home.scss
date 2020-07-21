@@ -13,10 +13,13 @@
     }
   }
 }
+.notice-container{
+  padding: 20px;
+}
 .notice-title{
   font-size: 20px;
   text-align: center;
-  margin: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 .each-notice{
@@ -27,6 +30,10 @@
   border: 1px solid dimgray;
   height: 30px;
   line-height: 20px;
+  &:hover{
+    color: brown;
+    border: 1px solid brown;
+  }
 }
 .main_container{
   background-image: url(washi1.png);
@@ -42,14 +49,22 @@
       padding: 50px 0;
     }
     &__image{
-      background-image: url(uemura4.jpg);
-      background-position: center center;
-      background-size: cover;
+      position: relative;
       width: 50vw;
       height: 35vw;
-      box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
       @media (max-width: 812px) {
         display:none
+      }
+      .inside-image{
+        position: absolute;
+        top: -150px;
+        left: -100px;
+        width: 1000px;
+        height: auto;
+        @media (max-width: 1200px) {
+          top: -100px;
+          width: 800px;
+        }
       }
     }
     &__text{
