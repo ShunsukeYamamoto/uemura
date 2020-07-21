@@ -23,8 +23,8 @@
 
 - if user_signed_in?
   .button-wrapper
-    = link_to "完了",done_order_path(@order),method: :delete,class:"admin-button"
-    =link_to "オーダー一覧",orders_path,class:"admin-button"
+    = link_to "完了",done_order_path(@order),method: :delete,class:"sub-button"
+  = render "shared/admin_nav"
 - else
   = link_to orders_menu_path do
     .re-order-button

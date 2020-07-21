@@ -19,6 +19,6 @@
         %p <電話番号> #{order[:tel]}
         %p <合計金額> ¥ #{order[:total_price]} -
         %p <受注時間> #{order[:created_at].strftime("%m-%d %H:%M")}
-        %p.sub-button #{link_to "詳細",order_path(order)}
+        = link_to "詳細",order_path(order), class: "sub-button"
   %br/
 = render "shared/admin_nav"
