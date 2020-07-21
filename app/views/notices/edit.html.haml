@@ -1,8 +1,11 @@
-= form_with model: @notice,local: true do |f|
-  %h1 お知らせ投稿
-  %p タイトル
-  = f.text_field :title
-  %p 内容
-  = f.text_area :content
-  %br/
-  = f.submit "変更"
+.admin-container
+  = form_with model: @notice,local: true do |f|
+    %h1 お知らせ投稿
+    %p.notice-label タイトル
+    = f.text_field :title
+    %p.notice-label 内容
+    = f.text_area :content, cols: 50, rows: 10
+    %br/
+    = f.submit "変更", class:'sub-button'
+
+= render "shared/admin_nav"

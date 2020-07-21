@@ -24,10 +24,9 @@
     @media (max-width: 1000px) {
       justify-content: space-between;
       padding: 10px 10vw;
-      background-color: rgba(0, 0, 0, 0.336);
+      background-color: rgb(50, 50, 50);
     }
     p{
-      text-shadow: 2px 2px 8px rgb(0, 0, 0);
       font-size: 16px;
       @media (min-width: 1001px) {
         line-height: 100px;
@@ -42,6 +41,23 @@
       }
       a{
         color: white;
+        position: relative;
+        display: inline-block;
+        transition: .3s;
+      }
+      a::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: .3s;
+        transform: translateX(-50%);
+      }
+      a:hover::after{
+        width: 40px;
       }
     }
   }

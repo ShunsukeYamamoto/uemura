@@ -1,0 +1,6 @@
+.button-wrapper
+  =link_to "オーダー一覧",orders_path,class:"admin-button"
+  = link_to "在庫入力",stocks_path, class:"admin-button"
+  = link_to "ログアウト",destroy_user_session_path,method: :delete, class:"admin-button"
+  = link_to "お知らせ投稿",new_notice_path,class:"admin-button"
+  = link_to "お知らせ編集",notices_path,class:"admin-button"

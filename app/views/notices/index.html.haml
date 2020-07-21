@@ -1,15 +1,16 @@
-%h1 お知らせ一覧
-- if Notice.exists?
-  - @notices.each do |n|
-    %table
-    %tr
-      %td #{n.title}
-      %td #{n.created_at}
-      %td 
-        =link_to "編集",edit_notice_path(n)
-      %td
-        =link_to "削除",notice_path(n),method: :delete
-- else 
-  %p 投稿はありません
+.admin-container
+  %h1 お知らせ一覧
+  - if Notice.exists?
+    - @notices.each do |n|
+      %table
+      %tr
+        %td #{n.title}
+        %td #{n.created_at}
+        %td 
+          =link_to "編集",edit_notice_path(n), class:'sub-button'
+        %td
+          =link_to "削除",notice_path(n),method: :delete, class:'sub-button'
+  - else 
+    %p 投稿はありません
 
-=link_to "戻る",orders_path
+= render "shared/admin_nav"
