@@ -6,10 +6,14 @@
   .details-container
     .menu-title
       Menu
+    .notice-text-sd
+      （串類は一人前・二本からのご注文となります）
     .box-wrapper
       .List-box
         .list-title
           豚もつ
+        .notice-text
+          （二本からのご注文となります）
         - @foods.first(14).each do |food|
           .item-box
             %p
@@ -18,6 +22,8 @@
               #{food.price}yen
         .list-title
           とり・その他
+        .notice-text
+          （二本からのご注文となります）
         - @foods.limit(6).offset(14).each do |food|
           .item-box
             %p
@@ -26,6 +32,8 @@
               #{food.price}yen
         .list-title
           野菜
+        .notice-text
+          （二本からのご注文となります）
         - @foods.limit(5).offset(20).each do |food|
           .item-box
             %p
@@ -35,6 +43,8 @@
       .List-box
         .list-title
           串揚げ
+        .notice-text
+          （二本からのご注文となります）
         - @foods.limit(4).offset(25).each do |food|
           .item-box
             %p
@@ -65,5 +75,7 @@
               #{food.name}
             %p.price
               #{food.price}yen
+    .box-wrapper
+      
 = render "shared/footer"
 = render "shared/back-to-top-button"
