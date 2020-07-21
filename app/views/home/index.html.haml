@@ -1,5 +1,13 @@
 .top_container#top_container.top_container__home
   = render "shared/header"
+.notice-container
+  .notice-title
+    お知らせ
+  - @notice.each do |notice|
+    =link_to "#", class: "notice-link" do
+      .each-notice
+        %p
+          #{notice.title} #{notice.content}
 .main_container
   .introduction_container
     .introduction_container__image

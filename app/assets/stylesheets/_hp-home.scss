@@ -8,7 +8,25 @@
     background-size: cover;
     background-position: center center;
     height: 55vw;
+    @media (max-width: 1000px) {
+      height: 70vh;
+    }
   }
+}
+.notice-title{
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+.each-notice{
+  text-align: center;
+  overflow: hidden;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid dimgray;
+  height: 30px;
+  line-height: 20px;
 }
 .main_container{
   background-image: url(washi1.png);
