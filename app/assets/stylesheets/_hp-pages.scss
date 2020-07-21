@@ -1,7 +1,6 @@
 .image-wrapper{
   width: 450px;
   height: 450px;
-  box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
   overflow: hidden;
   margin: auto;
   margin-top: 5vh;
@@ -17,13 +16,13 @@
   }
 }
 .paper-background{
-  margin: 5vh 10vw;
+  margin: 5vh 10vw 0;
   padding: 5vh 0;
   background-image: url(p0074_l.jpg);
   background-size: cover;
   box-shadow: 0 2px 10px rgba(50, 50, 50, 0.17);
   @media (max-width: 1000px) {
-    margin: 3vh 3vw;
+    margin: 3vh 3vw 0;
   }
   @media (max-width: 450px) {
     font-size: 20px;

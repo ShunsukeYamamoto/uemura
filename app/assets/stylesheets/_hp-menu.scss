@@ -76,3 +76,19 @@
     }
   }
 }
+.beer-sozai-wrapper{
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  margin-top: 5vh;
+  @media (max-width: 500px) {
+    width: 200px;
+    height: 200px;
+  }
+  .beer_sozai{
+    width: 100%;
+    height: 100%;
+  }
+}
