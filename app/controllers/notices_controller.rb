@@ -42,4 +42,5 @@ class NoticesController < ApplicationController
   def notice_params
     params.require(:notice).permit(:title,:content)
   end
+  
 end
