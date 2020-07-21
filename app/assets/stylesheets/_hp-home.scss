@@ -1,5 +1,8 @@
 .top_container{
   width: 100%;
+  background-image: url(washi1.png);
+  background-size: auto;
+  padding-bottom: 30px;
   &__home{
     background-image: url(uemuratopimage.jpg);
     background-size: cover;
@@ -8,7 +11,8 @@
   }
 }
 .main_container{
-  background-color: rgb(255, 255, 255);
+  background-image: url(washi1.png);
+  background-size: auto;
   .introduction_container{
     width: 100vw;
     padding: 100px 0;

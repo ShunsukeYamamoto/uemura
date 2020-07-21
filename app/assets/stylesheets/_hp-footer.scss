@@ -1,6 +1,6 @@
 .footer{
   width: 100vw;
-  background-color: #1e1b41;
+  background-color: #000000;
   text-align: center;
   padding: 30px 0;
   @media (max-width: 500px) {
@@ -9,8 +9,6 @@
   &__rogo{
     width: auto;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.151);
-    border-radius: 5px;
     margin-bottom: 10px;
     @media (max-width: 500px) {
       height: 50px;

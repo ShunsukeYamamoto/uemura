@@ -2,68 +2,116 @@
   = render "shared/header"
   .image-wrapper
     =image_tag "uemuramenu.png", class: "inside-image"
-.paper-background
-  .details-container
-    .menu-title
-      Menu
-    .box-wrapper
-      .List-box
-        .list-title
-          豚もつ
-        - @foods.first(14).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-        .list-title
-          とり・その他
-        - @foods.limit(6).offset(14).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-        .list-title
-          野菜
-        - @foods.limit(5).offset(20).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-      .List-box
-        .list-title
-          串揚げ
-        - @foods.limit(4).offset(25).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-        .list-title
-          揚げ物
-        - @foods.limit(5).offset(29).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-        .list-title
-          お刺身
-        - @foods.limit(3).offset(34).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
-        .list-title
-          一品料理
-        - @foods.limit(12).offset(37).each do |food|
-          .item-box
-            %p
-              #{food.name}
-            %p.price
-              #{food.price}yen
+  .paper-background
+    .details-container
+      .menu-title
+        おしながき
+      .notice-text-sd
+        （串類は一人前・二本からのご注文となります）
+      .box-wrapper
+        .List-box
+          .list-title
+            豚もつ
+          .notice-text
+            （二本からのご注文となります）
+          - @foods.first(14).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+          .list-title
+            とり・その他
+          .notice-text
+            （二本からのご注文となります）
+          - @foods.limit(6).offset(14).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+          .list-title
+            野菜
+          .notice-text
+            （二本からのご注文となります）
+          - @foods.limit(5).offset(20).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+        .List-box
+          .list-title
+            串揚げ
+          .notice-text
+            （二本からのご注文となります）
+          - @foods.limit(4).offset(25).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+          .list-title
+            揚げ物
+          - @foods.limit(5).offset(29).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+          .list-title
+            お刺身
+          - @foods.limit(3).offset(34).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+          .list-title
+            一品料理
+          - @foods.limit(12).offset(37).each do |food|
+            .item-box
+              %p
+                #{food.name}
+              %p.price
+                #{food.price}yen
+      .box-wrapper
+        .List-box
+          .list-title
+            ビール(アサヒ)
+          - @beers.each do |drink|
+            .item-box
+              %p
+                #{drink.drink_name}
+              %p.price
+                #{drink.price}yen
+          .list-title
+            ワイン
+          - @wines.each do |drink|
+            .item-box
+              %p
+                #{drink.drink_name}
+              %p.price
+                #{drink.price}yen
+          .list-title
+            ソフトドリンク
+          - @wines.each do |drink|
+            .item-box
+              %p
+                #{drink.drink_name}
+              %p.price
+                #{drink.price}yen
+          .beer-sozai-wrapper
+            =image_tag "beer_sozai.png", class: "inside-image beer_sozai"
+        .List-box
+          .list-title
+            サワー類
+          - @sours.each do |drink|
+            .item-box
+              %p
+                #{drink.drink_name}
+              %p.price
+                #{drink.price}yen
+
 = render "shared/footer"
 = render "shared/back-to-top-button"

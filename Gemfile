@@ -68,3 +68,4 @@ gem 'haml-rails'
 gem "font-awesome-sass"
 gem 'line-bot-api'
 gem 'dotenv-rails'
+gem 'active_hash'
