@@ -1,5 +1,6 @@
 .header#header
-  =image_tag "uemuralogo.png", class: "header__rogo"
+  = link_to root_path do
+    =image_tag "uemuralogo.png", class: "header__rogo"
   .header__nav
     %p
       =link_to root_path,class: "header__nav--home" do
