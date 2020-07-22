@@ -1,15 +1,6 @@
-.top_container#top_container.top_container__home
+.main-image-container#top_container
   = render "shared/header"
-.main_container
-  .introduction_container
-    .introduction_container__image
-      =image_tag "motuyaki_sozai.png", class: "inside-image"
-    .introduction_container__text
-      %h1
-        植むらの本格もつ焼き
-      .block
-      %h3
-        (test)鶏・豚串は全て『国産』のものを使用しております。特製秘伝の【醤油ダレ】【青唐辛子味噌】につけてお召し上がりいただきます。全卓保温器を設置！いつまでも温かキープ♪大トロ牛もつ焼き串、中落カルビ串は他では味わえません！串以外のメニューも豊富♪チキン南蛮、ホルモン・馬料理、半熟卵揚げた「からたま」は推しです。(test)
+.top_container
   .video_container
     %h1.video-title-text UEMURA Introduction Movie
     .video-middle-text
@@ -22,6 +13,8 @@
         =image_tag "noren_sozai.png", class: "noren-sozai"
         .notice-title
           NEWS
+      .notice-middle-text
+        お知らせなど日々更新中！！
       - @notice.each do |notice|
         =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
           .each-notice
@@ -33,7 +26,7 @@
               #{notice.content}
   .photo_container
     %h1.photo-title-text
-      植むら一押し料理
+      植むらの一押し料理
     .sliderArea
       .full-screen.slider
         %div

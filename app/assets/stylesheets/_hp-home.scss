@@ -3,227 +3,183 @@
   background-image: url(washi1.png);
   background-size: auto;
   padding-bottom: 30px;
-  &__home{
-    background-image: url(main_image.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 55vw;
-    @media (max-width: 1000px) {
-      height: 70vh;
+}
+.page-title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0 30px;
+  border-bottom: 10px solid black;
+  width: 400px;
+  margin: auto;
+  @media (max-width: 550px) {
+    font-size: 30px;
+  }
+}
+
+
+.main-image-container{
+  width: 100%;
+  background-image: url(main_image.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 55vw;
+  @media (max-width: 1000px) {
+    height: 70vh;
+  }
+}
+
+
+.video_container{
+  height: 55vw;
+  width: 100vw;
+  position: relative;
+  @media (min-width: 451px) {
+    padding: 100px 50px 100px 300px ;
+  }
+  display: flex;
+  @media (max-width: 450px) {
+    padding: 30px 10px 30px 50px;
+  }
+  .video-title-text{
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    @media (max-width: 600px) {
+      font-size: 20px;
+      top: -20px;
+      left: 30px;
+    }
+  }
+  .video-middle-text{
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    h2{
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+  iframe{
+    margin: auto;
+    border: 8px solid black;
+    @media (max-width: 600px) {
+      border: none;
     }
   }
 }
-.main_container{
-  background-image: url(washi1.png);
-  background-size: auto;
-  .introduction_container{
-    width: 100vw;
-    padding: 100px 0;
-    @media (min-width: 813px) {
-      display: flex;
-      align-items: center;
-    }
-    @media (max-width: 450px) {
-      padding: 50px 0;
-    }
-    &__image{
-      position: relative;
-      width: 50vw;
-      height: 35vw;
-      @media (max-width: 812px) {
-        display:none
-      }
-      .inside-image{
-        position: absolute;
-        top: -150px;
-        left: -100px;
-        width: 1000px;
-        height: auto;
-        @media (max-width: 1200px) {
-          top: -100px;
-          width: 800px;
-        }
-      }
-    }
-    &__text{
-      width: 50vw;
-      padding: 15px;
-      margin: auto;
-      @media (max-width: 812px) {
-        width: 100%;
-      }
-      h1{
-        text-align: center;
-        font-size: 40px;
-        margin-bottom: 4vh;
-        font-weight: bold;
-        @media (max-width: 450px) {
-          font-size: 20px;
-        }
-      }
-      .block{
-        margin: auto;
-        width: 40px;
-        border-top: solid 6px black;
-      }
-      h3{
-        margin: 0 auto;
-        margin-top: 4vh;
-        width: 28vw;
-        font-size: 17px;
-        line-height: 40px;
-        @media (max-width: 812px) {
-          width: 70vw;
-        }
-        @media (max-width: 450px) {
-          font-size: 13px;
-          line-height: 1.5em;
-        }
-      }
-    }
-  }
 
-  .video_container{
-    height: 55vw;
-    width: 100vw;
+.notice-container{
+  margin: 100px 0 0;
+  padding-bottom: 50px;
+  .notice-image{
     position: relative;
-    @media (min-width: 451px) {
-      padding: 100px 50px 100px 300px ;
-    }
-    display: flex;
-    @media (max-width: 450px) {
-      padding: 30px 10px 30px 50px;
-    }
-    .video-title-text{
-      font-size: 50px;
-      font-weight: bold;
-      position: absolute;
-      top: 0;
-      left: 50px;
-      @media (max-width: 600px) {
-        font-size: 20px;
-        top: -20px;
-        left: 30px;
-      }
-    }
-    .video-middle-text{
-      position: absolute;
-      top: 80px;
-      left: 80px;
-      h2{
-        font-size: 20px;
-        background-color: black;
-        color: white;
-        margin-bottom: 5px;
-        padding: 5px 10px;
-        @media (max-width: 800px) {
-          display: none;
-        }
-      }
-    }
-    iframe{
-      margin: auto;
-      border: 8px solid black;
-      @media (max-width: 600px) {
-        border: none;
-      }
-    }
-  }
-
-  .notice-container{
-    margin: 100px 0 0;
-    padding-bottom: 50px;
-    .notice-image{
-      position: relative;
-      height: 120px;
-      @media (max-width: 600px) {
-        height: 50px;
-      }
-      .noren-sozai{
-        position: absolute;
-        width: 600px;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        @media (max-width: 600px) {
-          width: 300px;
-        }
-      }
-      .notice-title{
-        font-size: 60px;
-        font-weight: bold;
-        background-color: rgb(255, 255, 255);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        @media (max-width: 600px) {
-          font-size: 30px;
-        }
-      }
-    }
-    .each-notice{
-      background: rgba(255, 255, 255, 0.541);
-      padding: 10px;
-      width: 90vw;
-      margin:  10px auto;
-      .notice-date{
-        border-bottom: 1px solid black;
-        width: 80px;
-        @media (max-width: 600px) {
-          font-size: 10px;
-          width: 50px;
-        }
-      }
-      .notice-title{
-        font-size: 20px;
-        height: 30px;
-        line-height: 30px;
-        font-size: bold;
-        overflow: hidden;
-        @media (max-width: 600px) {
-          font-size: 13px;
-          height: 20px;
-          line-height: 20px;
-        }
-      }
-      .notice-content{
-        font-size: 15px;
-        height: 20px;
-        line-height: 20px;
-        overflow: hidden;
-        @media (max-width: 600px) {
-          font-size: 10px;
-          height: 12px;
-          line-height: 12px;
-        }
-      }
-    }
-  }
-
-  .photo_container{
-    padding: 100px 0;
+    height: 120px;
     @media (max-width: 600px) {
-      padding: 0 0 100px;
+      height: 50px;
     }
-    width: 100vw;
-    overflow: hidden;
-    .photo-title-text{
+    .noren-sozai{
+      position: absolute;
+      width: 600px;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      @media (max-width: 600px) {
+        width: 300px;
+      }
+    }
+    .notice-title{
       font-size: 60px;
       font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       @media (max-width: 600px) {
-        font-size: 20px;
+        font-size: 30px;
+      }
+    }
+  }
+  .notice-middle-text{
+    text-align: center;
+    font-size: 20px;
+  }
+  .each-notice{
+    background: rgba(255, 255, 255, 0.541);
+    padding: 10px;
+    width: 90vw;
+    margin:  10px auto;
+    border: 2px solid black;
+    &:hover{
+      background: white;
+    }
+    .notice-date{
+      border-bottom: 1px solid black;
+      width: 80px;
+      @media (max-width: 600px) {
+        font-size: 10px;
+        width: 50px;
+      }
+    }
+    .notice-title{
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px;
+      font-size: bold;
+      overflow: hidden;
+      @media (max-width: 600px) {
+        font-size: 13px;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+    .notice-content{
+      font-size: 15px;
+      height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+      @media (max-width: 600px) {
+        font-size: 10px;
+        height: 12px;
+        line-height: 12px;
       }
     }
   }
 }
+
+.photo_container{
+  padding: 100px 0;
+  @media (max-width: 600px) {
+    padding: 0 0 100px;
+  }
+  width: 100vw;
+  overflow: hidden;
+  .photo-title-text{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    @media (max-width: 600px) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 
 .back-to-top-button{
   width: 50px;

@@ -19,4 +19,7 @@ class PagesController < ApplicationController
     @notice = Notice.find(params[:id])
   end
 
+  def images
+  end
+
 end
