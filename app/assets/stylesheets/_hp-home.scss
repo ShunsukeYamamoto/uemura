@@ -13,28 +13,6 @@
     }
   }
 }
-.notice-container{
-  padding: 20px;
-}
-.notice-title{
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-.each-notice{
-  text-align: center;
-  overflow: hidden;
-  padding: 5px;
-  margin: 5px;
-  border: 1px solid dimgray;
-  height: 30px;
-  line-height: 20px;
-  &:hover{
-    color: brown;
-    border: 1px solid brown;
-  }
-}
 .main_container{
   background-image: url(washi1.png);
   background-size: auto;
@@ -76,8 +54,9 @@
       }
       h1{
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 4vh;
+        font-weight: bold;
         @media (max-width: 450px) {
           font-size: 20px;
         }
@@ -85,7 +64,7 @@
       .block{
         margin: auto;
         width: 40px;
-        border-top: solid 6px #130b70;
+        border-top: solid 6px black;
       }
       h3{
         margin: 0 auto;
@@ -97,34 +76,98 @@
           width: 70vw;
         }
         @media (max-width: 450px) {
-          font-size: 16px;
+          font-size: 13px;
           line-height: 1.5em;
         }
+      }
+    }
+  }
+  .notice-container{
+    margin: 50px;
+    .notice-image{
+      position: relative;
+      .noren-sozai{
+        position: absolute;
+        width: 600px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      .notice-title{
+        font-size: 60px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.726);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
       }
     }
   }
   .video_container{
     height: 55vw;
     width: 100vw;
-    background-image: url(uemura6.jpg);
-    background-size: cover;
+    position: relative;
     @media (min-width: 451px) {
-      background-attachment: fixed;
-      padding: 50px 100px;
+      padding: 100px 50px 100px 300px ;
     }
     display: flex;
     @media (max-width: 450px) {
-      padding: 15px 30px;
+      padding: 30px 10px 30px 50px;
+    }
+    .video-title-text{
+      font-size: 50px;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 50px;
+      @media (max-width: 600px) {
+        font-size: 20px;
+        top: -20px;
+        left: 30px;
+      }
+    }
+    .video-middle-text{
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      h2{
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
     }
     iframe{
       margin: auto;
-      border-radius: 10px;
+      border: 8px solid black;
+      @media (max-width: 600px) {
+        border: none;
+      }
     }
   }
   .photo_container{
     padding: 100px 0;
     width: 100vw;
     overflow: hidden;
+    .photo-title-text{
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      @media (max-width: 600px) {
+        font-size: 20px;
+      }
+    }
   }
 }
 

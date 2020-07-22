@@ -1,13 +1,5 @@
 .top_container#top_container.top_container__home
   = render "shared/header"
-.notice-container
-  .notice-title
-    お知らせ
-  - @notice.each do |notice|
-    =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
-      .each-notice
-        %p
-          #{notice.title} #{notice.content}
 .main_container
   .introduction_container
     .introduction_container__image
@@ -19,8 +11,25 @@
       %h3
         (test)鶏・豚串は全て『国産』のものを使用しております。特製秘伝の【醤油ダレ】【青唐辛子味噌】につけてお召し上がりいただきます。全卓保温器を設置！いつまでも温かキープ♪大トロ牛もつ焼き串、中落カルビ串は他では味わえません！串以外のメニューも豊富♪チキン南蛮、ホルモン・馬料理、半熟卵揚げた「からたま」は推しです。(test)
   .video_container
+    %h1.video-title-text UEMURA Introduction Movie
+    .video-middle-text
+      %h2 店舗までの道のりや、店内の雰囲気を
+      %h2 動画でわかりやすくご紹介します
     %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "100%", :src => "https://www.youtube.com/embed/s5UvOYQ4Rpc", :width => "80%"}
+  - if @notice[0]
+    .notice-container
+      .notice-image
+        =image_tag "noren_sozai.png", class: "noren-sozai"
+        .notice-title
+          NEWS
+      - @notice.each do |notice|
+        =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
+          .each-notice
+            %p
+              #{notice.title} #{notice.content}
   .photo_container
+    %h1.photo-title-text
+      植むら一押し料理
     .sliderArea
       .full-screen.slider
         %div
