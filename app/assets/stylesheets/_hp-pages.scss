@@ -2,7 +2,10 @@
   width: 100%;
   background-image: url(washi1.png);
   background-size: auto;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
+  @media (max-width: 500px) {
+    padding-bottom: 50px;
+  }
 }
 .page-title{
   text-align: center;
