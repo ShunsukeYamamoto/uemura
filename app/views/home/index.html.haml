@@ -25,8 +25,12 @@
       - @notice.each do |notice|
         =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
           .each-notice
-            %p
-              #{notice.title} #{notice.content}
+            .notice-date
+              #{notice.created_at.strftime('%Y/%m/%d')}
+            .notice-title
+              #{notice.title}
+            .notice-content
+              #{notice.content}
   .photo_container
     %h1.photo-title-text
       植むら一押し料理
