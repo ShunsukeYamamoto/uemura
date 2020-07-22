@@ -10,7 +10,63 @@
     height: 70vh;
   }
 }
-
+.link_container{
+  width: 90vw;
+  margin: 0 auto 80px;
+  display: flex;
+  justify-content: space-between;
+  .link-wrapper{
+    width: 20vw;
+    .link-box{
+      width: 20vw;
+      height: 20vw;
+      border: 5px solid black;
+      position: relative;
+      &__menu{
+        background-image: url(menu_link_logo.png);
+        background-size: cover;
+      }
+      &__pride{
+        background-image: url(pride_link_logo.png);
+        background-size: cover;
+      }
+      &__contact{
+        background-image: url(contact_link_logo.png);
+        background-size: cover;
+      }
+      &__shop{
+        background-image: url(shop_link_logo.png);
+        background-size: cover;
+      }
+      .link-box__wrapper{
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 20vw;
+        height: 20vw;
+        &:hover{
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-size: 100px;
+        color: white;
+      }
+    }
+    .link-explanation{
+      text-align: center;
+      font-size: 30px;
+      margin: 20px;
+      font-weight: bold;
+    }
+  }
+}
 
 .video_container{
   height: 55vw;

@@ -1,6 +1,44 @@
 .main-image-container#top_container
   = render "shared/header"
 .top_container
+  .page-title.page-title__home
+    南小岩の
+    %br
+    こだわりもつ焼屋
+  =image_tag "fude_sen.png", class: "fude-sen"
+  .link_container
+    .link-wrapper
+      =link_to pages_menu_path do
+        .link-box.link-box__menu
+          .link-box__wrapper
+          %p
+            品
+      .link-explanation
+        お品書き
+    .link-wrapper
+      =link_to pages_pride_path do
+        .link-box.link-box__pride
+          .link-box__wrapper
+          %p
+            想
+      .link-explanation
+        こだわり
+    .link-wrapper
+      =link_to pages_contact_path do
+        .link-box.link-box__contact
+          .link-box__wrapper
+          %p
+            道
+      .link-explanation
+        アクセス
+    .link-wrapper
+      =link_to pages_images_path do
+        .link-box.link-box__shop
+          .link-box__wrapper
+          %p
+            店
+      .link-explanation
+        店舗紹介
   .video_container
     %h1.video-title-text UEMURA Introduction Movie
     .video-middle-text
