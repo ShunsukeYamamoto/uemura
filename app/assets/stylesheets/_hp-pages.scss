@@ -1,3 +1,39 @@
+.top_container{
+  width: 100%;
+  background-image: url(washi1.png);
+  background-size: auto;
+  padding-bottom: 100px;
+  @media (max-width: 500px) {
+    padding-bottom: 50px;
+  }
+}
+.page-title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 30px 0;
+  width: 400px;
+  margin: auto;
+  @media (max-width: 550px) {
+    font-size: 30px;
+    width: 250px;
+  }
+  &__home{
+    padding-top: 50px;
+  }
+}
+.fude-sen{
+  display: block;
+  text-align: center;
+  width: 150px;
+  margin: 10px auto 70px;
+  @media (max-width: 550px) {
+    width: 80px;
+    margin: 5px auto 40px;
+  }
+}
+
+
 .image-wrapper{
   width: 450px;
   height: 450px;
@@ -15,6 +51,7 @@
     height: 100%;
   }
 }
+
 .paper-background{
   margin: 0 10vw;
   padding: 5vh 0;
@@ -30,6 +67,7 @@
     padding: 2vh 0;
   }
 }
+
 .details-container{
   width: 100%;
   margin-top: 5vh;
@@ -42,13 +80,25 @@
     font-size: 20px;
     font-family: 'Georgia';
     line-height: 40px;
+    @media (max-width: 500px) {
+      font-size: 13px;
+      line-height: 25px;
+    }
     &__distance{
       font-size: 17px;
       line-height: 30px;
+      @media (max-width: 500px) {
+        font-size: 15px;
+        line-height: 30px;
+      }
     }
     &__number{
       font-size: 40px;
       line-height: 65px;
+      @media (max-width: 500px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
   }
   &__button{
