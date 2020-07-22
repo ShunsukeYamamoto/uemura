@@ -1,7 +1,7 @@
 class Drink < ActiveHash::Base
 
   self.data = [
-      {id: 1, name: "ビール", drink_name: '生ビール', price: 500}, {id: 2, name: "ビール", drink_name: '瓶ビール(大)', price: 600}, {id: 3, name: "ソフトドリンク", drink_name: 'ホッピー', price:400},
+      {id: 1, name: "ビール", drink_name: '生ビール', price: 500}, {id: 2, name: "ビール", drink_name: '瓶ビール(大)', price: 600}, {id: 3, name: "サワー類", drink_name: 'ホッピー', price:400},
       {id: 4, name: "サワー類", drink_name: '黒ホッピー', price:400}, {id: 5, name: "サワー類", drink_name: 'バイスサワー', price:400}, {id: 6, name: "サワー類", drink_name: 'ウーロンハイ', price:400},
       {id: 7, name: "サワー類", drink_name: '緑茶ハイ', price:400}, {id: 8, name: "サワー類", drink_name: 'レモンサワー', price:400}, {id: 9, name: "サワー類", drink_name: '青リンゴサワー', price:400},
       {id: 10, name: "サワー類", drink_name: 'GFサワー', price:400}, {id: 11, name: "サワー類", drink_name: 'シークワーサーサワー', price:400}, {id: 12, name: "サワー類", drink_name: 'クエン酸サワー', price:400},
