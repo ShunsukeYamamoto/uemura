@@ -1,39 +1,32 @@
-
 .introduction_container{
-  width: 100vw;
+  width: 80vw;
+  margin: auto;
   @media (min-width: 813px) {
     display: flex;
     align-items: center;
   }
   &__image{
     position: relative;
-    width: 50vw;
-    height: 35vw;
+    width: 45vw;
+    height: 50vh;
+    background-image: url(motuyaki_sozai.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: cover;
     @media (max-width: 812px) {
       display:none
     }
-    .inside-image{
-      position: absolute;
-      top: -150px;
-      left: -100px;
-      width: 1000px;
-      height: auto;
-      @media (max-width: 1200px) {
-        top: -100px;
-        width: 800px;
-      }
-    }
   }
   &__text{
-    width: 50vw;
-    padding: 15px;
+    width: 35vw;
+    padding: 15px 0;
     margin: auto;
     @media (max-width: 812px) {
       width: 100%;
     }
     h1{
       text-align: center;
-      font-size: 40px;
+      font-size: 30px;
       margin-bottom: 4vh;
       font-weight: bold;
       @media (max-width: 450px) {
@@ -44,6 +37,9 @@
       margin: auto;
       width: 40px;
       border-top: solid 6px black;
+      @media (max-width: 812px) {
+        display: none;
+      }
     }
     h3{
       margin: 0 auto;
@@ -59,5 +55,14 @@
         line-height: 1.5em;
       }
     }
+  }
+}
+.motuyaki_sozai-sd{
+  display:none;
+  @media (max-width: 812px) {
+    display: block;
+    width: 80vw;
+    text-align: center;
+    margin: 10px auto;
   }
 }
