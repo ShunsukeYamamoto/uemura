@@ -9,17 +9,21 @@
     position: relative;
     width: 45vw;
     height: 50vh;
-    background-image: url(motuyaki_sozai.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: cover;
     @media (max-width: 812px) {
       display:none
+    }
+    .motuyaki_sozai{
+      width: 50vw;
+      position: absolute;
+      top: 60%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
     }
   }
   &__text{
     width: 35vw;
-    padding: 15px 0;
     margin: auto;
     @media (max-width: 812px) {
       width: 100%;
