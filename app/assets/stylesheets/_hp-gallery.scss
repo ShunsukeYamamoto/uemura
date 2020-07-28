@@ -1,0 +1,15 @@
+.gallery-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 85vw;
+  margin: auto;
+}
+.food-image{
+  width: 40vw;
+  border: 5px solid white;
+  margin-bottom: 50px;
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+}
