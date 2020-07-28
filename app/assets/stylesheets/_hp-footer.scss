@@ -25,6 +25,14 @@
     .number{
       font-size: 25px;
     }
+    a{
+      color: white;
+      border-bottom: 1px solid white;
+    }
+    a:hover{
+      color: steelblue;
+      border-bottom: 1px solid steelblue;
+    }
   }
   &_nav{
     display: flex;

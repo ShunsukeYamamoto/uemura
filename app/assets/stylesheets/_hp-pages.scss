@@ -75,6 +75,13 @@
   @media (max-width: 450px) {
     margin-top: 2vh;
   }
+  a{
+    border-bottom: 1px solid black;
+  }
+  a:hover{
+    color: steelblue;
+    border-bottom: 1px solid steelblue;
+  }
   .shop-detail{
     text-align: center;
     font-size: 20px;
