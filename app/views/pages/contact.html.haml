@@ -11,10 +11,8 @@
       %p.shop-detail 東京都 江戸川区 南小岩 7-25-12
       %p.shop-detail.shop-detail__distance JR総武線「小岩駅」南口より徒歩1～2分
       = link_to "/#news", class: "shop-detail" do
-        営業時間 ~お知らせからご確認ください~
-      -# .details-container__button
-      -#   =link_to "#" do
-      -#     ご予約 >
+        営業時間 ※お知らせからご確認ください
+      %p.shop-detail.shop-detail__message 今般の新型コロナウイルス感染症の感染拡大ならびにお客様の健康と安全を考慮し、当面の間、営業時間を変更しております。
     .map_container
       %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.6913805089116!2d139.88080681526034!3d35.73380788018205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601885d86046c46d%3A0x8c1ff4d1fb9d2915!2z44CSMTMzLTAwNTYg5p2x5Lqs6YO95rGf5oi45bed5Yy65Y2X5bCP5bKp77yX5LiB55uu77yS77yV4oiS77yR77yS!5e0!3m2!1sja!2sjp!4v1590799517956!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "600"}
 = render "shared/footer"
