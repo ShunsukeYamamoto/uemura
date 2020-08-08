@@ -25,6 +25,7 @@
   &__text{
     width: 35vw;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.541);
     @media (max-width: 812px) {
       width: 100%;
     }
@@ -51,6 +52,7 @@
       width: 28vw;
       font-size: 17px;
       line-height: 40px;
+      font-weight: bold;
       @media (max-width: 812px) {
         width: 70vw;
       }
