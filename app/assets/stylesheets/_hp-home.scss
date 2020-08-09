@@ -102,7 +102,7 @@
   }
   @media (max-width: 500px) {
     text-align: center;
-    padding: 30px 30px;
+    padding: 0 30px 30px;
   }
   .video-title-text{
     font-size: 30px;
@@ -146,11 +146,11 @@
 }
 
 .notice-container{
-  margin-top: 200px;
+  padding-top: 100px;
   padding-bottom: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
   @media (max-width: 500px) {
-    margin-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 0;
   }
   .notice-image{
     position: relative;
@@ -188,8 +188,12 @@
   }
   .notice-middle-text{
     text-align: center;
-    font-size: 20px;
-    color: white;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    @media (max-width: 600px) {
+      font-size: 15px;
+    }
   }
   .each-notice{
     padding: 10px;
@@ -197,6 +201,7 @@
     margin:  10px auto;
     border: 2px solid white;
     color: white;
+    background: rgba(0, 0, 0, 0.6);
     &:hover{
       background: black;
     }

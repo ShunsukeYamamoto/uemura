@@ -1,11 +1,31 @@
 .main-image-container#top_container
   = render "shared/header"
 .top_container
+  
+  - if @notice[0]
+    .notice-container
+      .notice-image
+        =image_tag "noren_sozai.png", class: "noren-sozai"
+        .notice-title#news
+          NEWS
+      .notice-middle-text
+        お知らせなど日々更新中！！
+      - @notice.each do |notice|
+        =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
+          .each-notice
+            .notice-date
+              #{notice.created_at.strftime('%Y/%m/%d')}
+            .notice-title
+              #{notice.title}
+            .notice-content
+              #{notice.content}
+
   .page-title.page-title__home
     東京 小岩の
     %br
     もつ焼き屋
   =image_tag "fude_sen.png", class: "fude-sen"
+
   .link_container
     .link-wrapper
       =link_to pages_menu_path do
@@ -39,23 +59,7 @@
             画
       .link-explanation
         ギャラリー
-  - if @notice[0]
-    .notice-container
-      .notice-image
-        =image_tag "noren_sozai.png", class: "noren-sozai"
-        .notice-title#news
-          NEWS
-      .notice-middle-text
-        お知らせなど日々更新中！！
-      - @notice.each do |notice|
-        =link_to "/pages/notice/#{notice.id}", class: "notice-link" do
-          .each-notice
-            .notice-date
-              #{notice.created_at.strftime('%Y/%m/%d')}
-            .notice-title
-              #{notice.title}
-            .notice-content
-              #{notice.content}
+  
   .video_container
     %h1.video-title-text UEMURA Introduction Movie
     .video-middle-text
