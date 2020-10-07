@@ -16,9 +16,11 @@
             .notice-date
               #{notice.created_at.strftime('%Y/%m/%d')}
             .notice-title
-              #{notice.title}
+              -# #{notice.title}
+              = simple_format(h(notice.title))
             .notice-content
-              #{notice.content}
+              -# #{notice.content}
+              = simple_format(h(notice.content))
 
   .page-title.page-title__home
     東京 小岩の

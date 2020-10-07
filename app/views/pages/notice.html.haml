@@ -7,7 +7,8 @@
   .notice-show-title
     【#{@notice.title}】
   .notice-show-content
-    #{@notice.content}
+    -# #{@notice.content}
+    = simple_format(h(notice.content))
   
 = render "shared/footer"
 = render "shared/back-to-top-button"
